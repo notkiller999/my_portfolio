@@ -1,0 +1,31 @@
+.sidepanel {
+	position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	width: 380px;
+	height: 24px;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 3;
+	top: 350px;
+	left: -120px;
+	transform: rotate(-90deg);
+	&__text {
+		color: $main-color;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	&__devider {
+		width: 70px;
+		height: 2px;
+		background-color: $main-color;
+	}
+	&__img {
+		transform: rotate(90deg);
+	}
+	&__link {
+		&:nth-child(6) {
+			transform: rotate(-90deg);
+		}
+	}
+}
