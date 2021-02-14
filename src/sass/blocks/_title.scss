@@ -22,4 +22,30 @@
 		font-size: 20px;
 		line-height: 30px;
 	}
+
+	&_fz12 {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 18px;
+	}
+	&__section-title {
+		text-align: center;
+		position: relative;
+		@include before_circle;
+		&:before {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__section-subtitle {
+		text-align: center;
+		margin-top: 6px;
+		position: relative;
+		@include after_divider;
+		&:after {
+			left: 50%;
+			transform: translateX(-50%);
+			top: calc(100% + 25px);
+		}
+	}
 }

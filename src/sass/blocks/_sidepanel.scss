@@ -2,14 +2,17 @@
 	position: fixed;
 	display: flex;
 	flex-wrap: wrap;
-	width: 380px;
-	height: 24px;
+	width: 400px;
+	height: 30px;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 3;
 	top: 350px;
-	left: -165px;
+	left: -180px;
 	transform: rotate(-90deg);
+	background-color: rgba(#000000, 0.6);
+	border-radius: 4px;
+	padding: 0 10px 0 10px;
 	&__text {
 		color: $main-color;
 		font-weight: bold;

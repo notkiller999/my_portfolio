@@ -1,11 +1,6 @@
 .about {
 	padding-top: 120px;
-	.title_fz36 {
-		position: relative;
-		margin: 6px 0 24px 0;
-		@include after_divider;
-	}
-	.title_fz16 {
+	&__title {
 		position: relative;
 		margin-left: 14px;
 		@include before_circle;
@@ -14,6 +9,12 @@
 			left: -13px;
 		}
 	}
+	&__subtitle {
+		position: relative;
+		margin: 6px 0 24px 0;
+		@include after_divider;
+	}
+
 	&__wrapper {
 		display: grid;
 		grid-template: repeat(2, minmax(100px, auto)) / 400px 570px;
