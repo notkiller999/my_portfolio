@@ -13,11 +13,15 @@
 			right: 240px;
 		}
 	}
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+	}
 
 	&__btns {
 		display: flex;
-		margin-left: 875px;
-		widows: 270px;
+		width: 270px;
 		justify-content: space-between;
 		align-items: center;
 	}
