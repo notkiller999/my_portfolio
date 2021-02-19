@@ -2,6 +2,42 @@
 	.container {
 		max-width: 960px;
 	}
+	.sidepanel {
+		display: none;
+	}
+	.about {
+		&__wrapper {
+			grid-template-columns: 400px 530px;
+			gap: 30px;
+		}
+	}
+	.resume {
+		&__wrapper {
+			padding: 85px 10px 0 10px;
+			column-gap: 90px;
+		}
+	}
+	.using {
+		&__tech-item {
+			width: 230px;
+			height: auto;
+		}
+
+		&__skills {
+			&-wrapper {
+				grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+			}
+			&-item {
+				width: 100%;
+			}
+		}
+	}
+	.contacts {
+		&__wrapper {
+			padding: 0;
+			grid-template-columns: 330px 600px;
+		}
+	}
 }
 
 @media (max-width: 992px) {
@@ -13,6 +49,47 @@
 		&__title {
 			font-size: 36px;
 			line-height: 50px;
+		}
+	}
+	.about {
+		&__wrapper {
+			width: 100%;
+			grid-template-columns: 350px 340px;
+			&__skills {
+				grid-template-columns: 340px;
+			}
+			&__skill {
+				&__text {
+					width: 267px;
+					&::before {
+						right: 295px;
+					}
+				}
+			}
+		}
+	}
+	.resume {
+		&__wrapper {
+			grid-template-columns: repeat(2, 304px);
+		}
+	}
+	.using {
+		&__tech-wrapper {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	.price {
+		&__wrapper {
+			margin: 90px 0 0 0;
+			grid-template-columns: repeat(2, 350px);
+		}
+	}
+	.contacts {
+		&__wrapper {
+			grid-template-columns: 100%;
+		}
+		&__photo {
+			display: none;
 		}
 	}
 }
@@ -33,12 +110,96 @@
 			}
 		}
 	}
+	.about {
+		&__wrapper {
+			width: 100%;
+			grid-template-columns: 540px;
+			grid-template-rows: 200px 200px;
+			&__skills {
+				grid-template-columns: 100%;
+				grid-template-rows: repeat(3, minmax(80px, auto));
+				grid-auto-rows: minmax(80px, auto);
+			}
+			&__skill {
+				&__text {
+					width: 470px;
+					&::before {
+						left: -62px;
+					}
+				}
+			}
+		}
+	}
+	.resume {
+		&__wrapper {
+			grid-template-columns: 100%;
+		}
+	}
+	.using {
+		&__tech {
+			&-wrapper {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			&-item {
+				width: 263px;
+			}
+		}
+	}
+	.works {
+		&__wrapper {
+			grid-template: repeat(4, 280px) / repeat(2, 2fr);
+		}
+		&__item {
+			&_first {
+				grid-row: 1/2;
+				grid-column: 1/2;
+			}
+			&_second {
+				grid-row: 1/2;
+				grid-column: 2/3;
+			}
+			&_third {
+				grid-row: 2/3;
+				grid-column: 1/2;
+			}
+			&_four {
+				grid-row: 2/4;
+				grid-column: 2/3;
+			}
+			&_five {
+				grid-row: 3/4;
+				grid-column: 1/2;
+			}
+			&_six {
+				grid-row: 4/5;
+				grid-column: 1/3;
+			}
+			&:hover {
+				transform: none;
+				filter: none;
+			}
+		}
+	}
+	.price {
+		&__wrapper {
+			margin: 90px 50px 0 50px;
+			grid-template-columns: 100%;
+		}
+	}
+	.contacts {
+		&__form {
+			grid-template-columns: repeat(2, 250px);
+		}
+	}
 }
 
 @media (max-width: 576px) {
 	.container {
 		max-width: 100%;
 		padding: 0 10px;
+	}
+	.hamburger {
+		right: 20px;
 	}
 	.promo {
 		&__title {
@@ -55,11 +216,96 @@
 		}
 	}
 	.menu {
-		&__close {
-			right: 70px;
-		}
 		&__block {
-			padding-left: 30px;
+			padding-left: 20px;
+			width: 250px;
+		}
+	}
+	.about {
+		&__wrapper {
+			grid-template-columns: minmax(260px, auto);
+			grid-template-rows: 155px 155px;
+			&__skill {
+				&__text {
+					width: 80%;
+					margin: 0 auto;
+					&::before {
+						left: -19%;
+					}
+				}
+			}
+		}
+		&__subtitle {
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
+	.title {
+		&__section-subtitle {
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
+	.using {
+		&__tech {
+			&-wrapper {
+				grid-template-columns: 100%;
+				justify-items: center;
+			}
+			&-item {
+				width: 270px;
+			}
+		}
+		&__skills {
+			&-wrapper {
+				grid-template: repeat(3, 1fr) / 1fr;
+			}
+		}
+	}
+	.works {
+		&__wrapper {
+			grid-template: repeat(6, 280px) / 100%;
+		}
+		&__item {
+			grid-column: 1/2;
+			grid-row: auto;
+		}
+	}
+	.price {
+		&__wrapper {
+			margin: 90px 0 0 0;
+			grid-template-columns: 100%;
+		}
+	}
+	.contacts {
+		&__form {
+			grid-template: 45px 45px 190px 45px / minmax(285px, 450px);
+		}
+		&__textarea {
+			grid-row: 3/4;
+			grid-column: 1/3;
+		}
+		&__input {
+			&:nth-child(1) {
+				grid-row: 1/2;
+				grid-column: 1/3;
+			}
+			&:nth-child(2) {
+				grid-row: 2/3;
+				grid-column: 1/3;
+			}
+			&:nth-child(4) {
+				grid-row: 4/5;
+				grid-column: 1/3;
+			}
+		}
+		&__privacy {
+			grid-template: repeat(2, 50px) / 1fr;
+			justify-items: center;
+			&_polyce {
+				grid-row: 1/2;
+				text-align: center;
+			}
 		}
 	}
 }
